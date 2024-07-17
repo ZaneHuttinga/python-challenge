@@ -37,18 +37,28 @@ dec_date = dates[dec_index]
 # Print analysis in terminal
 print("\nFinancial Analysis\n")
 print("----------------------------\n")
+# Print number of months
 print(f"Total Months: {months}\n")
+# Print total change
 print(f"Total: ${net}\n")
+# Print average change
 print(f"Average Change: ${avg:.2f}\n")
-print(f"Greatest Increase in Profits: {inc_date} ${increase}\n")
-print(f"Greatest Decrease in Profits: {dec_date} ${decrease}\n")
+# Print greatest increase
+print(f"Greatest Increase in Profits: {inc_date} (${increase})\n")
+# Print greatest decrease
+print(f"Greatest Decrease in Profits: {dec_date} (${decrease})\n")
 
 # Print analysis in file
 with open("python-challenge/PyBank/Analysis/PyBank.txt", "w") as f:
     print("Financial Analysis\n", file=f)
     print("----------------------------\n", file=f)
+    # Print number of months
     print(f"Total Months: {months}\n", file=f)
+    # Print total change
     print(f"Total: ${net}\n", file=f)
+    # Print average change
     print(f"Average Change: ${avg:.2f}\n", file=f)
-    print(f"Greatest Increase in Profits: {inc_date} ${increase}\n", file=f)
-    print(f"Greatest Decrease in Profits: {dec_date} ${decrease}\n", file=f)
+    # Print greatest increase
+    print(f"Greatest Increase in Profits: {inc_date} (${increase})\n", file=f)
+    # Print greatest decrease
+    print(f"Greatest Decrease in Profits: {dec_date} (${decrease})\n", file=f)

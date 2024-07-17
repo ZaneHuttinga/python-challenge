@@ -12,8 +12,6 @@ ElectionData = pd.read_csv("~/python-challenge/PyPoll/Resources/election_data.cs
 # Pull out third column of data set
 votes_by_candidate = ElectionData['Candidate']
 
-
-
 # Counting votes 
 
 # Total number
@@ -44,11 +42,14 @@ for i in range(len(candidates)):
 # Print results in terminal
 print("\nElection Results\n")
 print("-------------------------\n")
+# Print total number of votes
 print(f"Total Votes: {votes}\n")
 print("-------------------------\n")
+# Print each candidate's vote percentage and vote total
 for i in range(len(candidates)):
     print(f"{candidates[i]}: {vote_counts[i]/votes*100:.3f}% ({vote_counts[i]})\n")
 print("-------------------------\n")
+# Print winner
 print(f"Winner: {winner}\n")
 print("-------------------------\n")
 
@@ -56,10 +57,13 @@ print("-------------------------\n")
 with open("python-challenge/PyPoll/Analysis/PyPoll.txt", "w") as f:
     print("Election Results\n", file=f)
     print("-------------------------\n", file=f)
+    # Print total number of votes
     print(f"Total Votes: {votes}\n", file=f)
     print("-------------------------\n", file=f)
+    # Print each candidate's vote percentage and vote total
     for i in range(len(candidates)):
         print(f"{candidates[i]}: {vote_counts[i]/votes*100:.3f}% ({vote_counts[i]})\n", file=f)
     print("-------------------------\n", file=f)
+    # Print winner
     print(f"Winner: {winner}\n", file=f)
     print("-------------------------\n", file=f)
