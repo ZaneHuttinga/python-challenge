@@ -9,7 +9,7 @@ BudgetData = pd.read_csv("~/python-challenge/PyBank/Resources/budget_data.csv")
 
 # Define stats
 
-# Pull out second column
+# Pull out second column of data set
 ProfitLosses = BudgetData['Profit/Losses']
 
 # Basic stats
