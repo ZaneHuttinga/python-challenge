@@ -42,3 +42,13 @@ print(f"Total: ${net}\n")
 print(f"Average Change: ${avg:.2f}\n")
 print(f"Greatest Increase in Profits: {inc_date} ${increase}\n")
 print(f"Greatest Decrease in Profits: {dec_date} ${decrease}\n")
+
+# Print analysis in file
+with open("python-challenge/PyBank/Analysis/PyBank.txt", "w") as f:
+    print("Financial Analysis\n", file=f)
+    print("----------------------------\n", file=f)
+    print(f"Total Months: {months}\n", file=f)
+    print(f"Total: ${net}\n", file=f)
+    print(f"Average Change: ${avg:.2f}\n", file=f)
+    print(f"Greatest Increase in Profits: {inc_date} ${increase}\n", file=f)
+    print(f"Greatest Decrease in Profits: {dec_date} ${decrease}\n", file=f)
