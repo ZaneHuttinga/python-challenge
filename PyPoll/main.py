@@ -34,11 +34,14 @@ for i in range(len(candidates)):
         if j == candidates[i]:
             vote_counts[i] = vote_counts[i]+1
 
+# Find winner
+winning_total = max(vote_counts)
+for i in range(len(candidates)):
+    if vote_counts[i] == winning_total:
+        winner = candidates[i]
 
 
-
-
-# Print analysis in terminal
+# Print results in terminal
 print("\nElection Results\n")
 print("-------------------------\n")
 print(f"Total Votes: {votes}\n")
@@ -46,3 +49,17 @@ print("-------------------------\n")
 for i in range(len(candidates)):
     print(f"{candidates[i]}: {vote_counts[i]/votes*100:.3f}% ({vote_counts[i]})\n")
 print("-------------------------\n")
+print(f"Winner: {winner}\n")
+print("-------------------------\n")
+
+# Print results in file
+with open("python-challenge/PyPoll/Analysis/PyPoll.txt", "w") as f:
+    print("Election Results\n", file=f)
+    print("-------------------------\n", file=f)
+    print(f"Total Votes: {votes}\n", file=f)
+    print("-------------------------\n", file=f)
+    for i in range(len(candidates)):
+        print(f"{candidates[i]}: {vote_counts[i]/votes*100:.3f}% ({vote_counts[i]})\n", file=f)
+    print("-------------------------\n", file=f)
+    print(f"Winner: {winner}\n", file=f)
+    print("-------------------------\n", file=f)
